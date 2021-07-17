@@ -1,3 +1,5 @@
+@import "../../styles/media";
+
 .DisplayScreen {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,19 @@
   margin: 0 8px;
   flex: 0 0 auto;
   margin-left: 40px;
+
+  @include table-portrait {
+    margin-left: 20px;
+  }
+  @include table {
+    margin-left: 10px;
+  }
+  @include mobile {
+    padding-top: 16px;
+    max-width: 100%;
+    flex-basis: 100%;
+    margin: 0;
+  }
 
   &__row {
     // flex-basis: 100%;
@@ -22,11 +37,19 @@
   }
 
   &__screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     border: 6px solid black;
     border-radius: 8px;
     min-height: 80px;
-    background-color: gray;
+    background-color: #9fa18d;
+    font-size: 30px;
+
+    @include table {
+      font-size: 24px;
+    }
   }
 
   &__light {

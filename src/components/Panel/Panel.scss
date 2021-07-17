@@ -1,3 +1,5 @@
+@import "../../styles/media";
+
 .Panel {
   flex-basis: 40%;
   max-width: 40%;
@@ -6,6 +8,19 @@
   padding: 8px;
   background-color: gray;
   margin-right: 30px;
+
+  @include table-portrait {
+    margin-right: 10px;
+  }
+
+  @include table {
+    margin-right: 10px;
+  }
+  @include mobile {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin: 0;
+  }
 
   &__buttonGroup {
     display: flex;
@@ -22,6 +37,9 @@
     color: inherit;
     border: none;
     outline: inherit;
+    @include table {
+      font-size: 10px;
+    }
 
     &:hover,
     &:focus {
