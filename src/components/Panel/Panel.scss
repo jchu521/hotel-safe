@@ -6,7 +6,7 @@
   padding: 8px;
   background-color: gray;
   margin-right: 30px;
-  
+
   &__buttonGroup {
     display: flex;
     flex-wrap: wrap;
@@ -18,9 +18,14 @@
     height: 40px;
     background-color: white;
     margin-bottom: 4px;
-	cursor: pointer;
-	color: inherit;
-	border: none;
-	outline: inherit;
+    cursor: pointer;
+    color: inherit;
+    border: none;
+    outline: inherit;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 }

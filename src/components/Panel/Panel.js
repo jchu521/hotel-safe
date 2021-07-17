@@ -1,66 +1,42 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {
+  enterPin,
+  savePin,
+  clearPin,
+} from "../../store/features/safe/safeSlice";
+import Button from "../Button/Button";
+
+import { keypad } from "../../constants/index";
 
 import "./Panel.scss";
 
-const buttonGroup = [
-  {
-    label: 1,
-    onClick: () => {},
-  },
-  {
-    label: 2,
-    onClick: () => {},
-  },
-  {
-    label: 3,
-    onClick: () => {},
-  },
-  {
-    label: 4,
-    onClick: () => {},
-  },
-  {
-    label: 5,
-    onClick: () => {},
-  },
-  {
-    label: 6,
-    onClick: () => {},
-  },
-  {
-    label: 7,
-    onClick: () => {},
-  },
-  {
-    label: 8,
-    onClick: () => {},
-  },
-  {
-    label: 9,
-    onClick: () => {},
-  },
-  {
-    label: "CLR",
-    onClick: () => {},
-  },
-  {
-    label: 0,
-    onClick: () => {},
-  },
-  {
-    label: "=>",
-    onClick: () => {},
-  },
-];
+export default function Panel() {
+  const dispatch = useDispatch();
 
-export default function Panel(props) {
+  const handleClick = (e, value) => {
+    e.preventDefault();
+
+    //clear pin
+    if (value === "CLR") {
+      dispatch(clearPin());
+    } else if (value === "=>") {
+      dispatch(savePin());
+    } else {
+      dispatch(enterPin(value));
+    }
+  };
+
   return (
     <div className="Panel">
       <div className="Panel__buttonGroup">
-        {buttonGroup.map((b, i) => (
-          <button className="Panel__button" key={i} onClick={b.onClick}>
-            {b.label}
-          </button>
+        {keypad.map((b, i) => (
+          <Button
+            className="Panel__button"
+            key={i}
+            onClick={(e) => handleClick(e, b.key)}
+            name={b.key}
+          />
         ))}
       </div>
     </div>
