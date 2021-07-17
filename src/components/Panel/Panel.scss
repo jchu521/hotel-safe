@@ -1,0 +1,26 @@
+.Panel {
+  flex-basis: 40%;
+  max-width: 40%;
+  width: 40%;
+  border: 4px solid black;
+  padding: 8px;
+  background-color: gray;
+  margin-right: 30px;
+  
+  &__buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__button {
+    flex-basis: 32%;
+    height: 40px;
+    background-color: white;
+    margin-bottom: 4px;
+	cursor: pointer;
+	color: inherit;
+	border: none;
+	outline: inherit;
+  }
+}
