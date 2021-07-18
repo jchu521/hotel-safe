@@ -22,7 +22,7 @@ Bonus points for enzyme or jest unit tests.
 
 ## Assumption
 
-- Every time when the user want to update the pin need to enter new 4 digits pin, then press the enter btn, to save and change it. If no any pin enter and then press enter btn, will lock the safe, with the same password. If enter less than 4 digits will display "Please enter 4 digits" message.
+- Every time when the user want to update the pin need to enter new 4 digits pin, then press the enter btn, to save and change it. If no pin enter and then press enter btn, will lock the safe, with the same password. If enter less than 4 digits will display "Please enter 4 digits" message.
 
 ## How to install and start
 
