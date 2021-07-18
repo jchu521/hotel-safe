@@ -7,7 +7,7 @@ import "./Safe.scss";
 
 export default function Safe() {
   return (
-    <div className="Safe">
+    <div className="Safe" data-test='component-safe'>
       <Panel />
       <DisplayScreen />
     </div>

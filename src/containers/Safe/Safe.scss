@@ -2,7 +2,6 @@
 
 .Safe {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #2d3f53;
@@ -14,5 +13,6 @@
   }
   @include mobile {
     padding: 16px;
+    flex-wrap: wrap;
   }
 }

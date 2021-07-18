@@ -8,14 +8,12 @@ export default function DisplayScreen() {
   const { isLocked, displayMessage } = safe;
 
   return (
-    <div className="DisplayScreen">
+    <div className="DisplayScreen" data-test="component-displayScreen">
       <div className="DisplayScreen__row">
         <div className="DisplayScreen__screen">{displayMessage}</div>
       </div>
       <div className="DisplayScreen__row">
-        <div
-          className={`DisplayScreen__light ${isLocked ? "red" : "green"}`}
-        ></div>
+        <div className={`DisplayScreen__light ${isLocked ? "red" : "green"}`} />
       </div>
     </div>
   );

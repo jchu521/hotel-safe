@@ -28,8 +28,8 @@ export default function Panel() {
   };
 
   return (
-    <div className="Panel">
-      <div className="Panel__buttonGroup">
+    <div className="Panel" data-test="component-panel">
+      <div className="Panel__buttonGroup" data-test="panel-buttonGroup">
         {keypad.map((b, i) => (
           <Button
             className="Panel__button"
