@@ -32,12 +32,9 @@ export const safeSlice = createSlice({
         }
       } else {
         //no password enter
-        if (state.enterPin.Length === 0) {
-          //if not press any password then check
-          if (state.pin.length !== 0) {
-            // if has password remain the same and locked
-            state.isLocked = true;
-          }
+        if (state.enterPin.length === 0 && state.pin.length !== 0) {
+          //if not press any password then check if has password remain the same and locked
+          state.isLocked = true;
         } else if (state.enterPin.length === state.maxPinLength) {
           //save or update password when enter 4 digital and press enter
           state.pin = state.enterPin;
